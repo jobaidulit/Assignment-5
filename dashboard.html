@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--tailwind-->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!--daisy ui-->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     
+    <title>All Issues Tracker</title>
+   
+</head>
+<body class="w-11/12 mx-auto bg-[#e4e4e730]">
+    <!-- Navbar -->
+
+<div class="bg-white shadow p-4 flex justify-between items-center">
+
+ <h1 class="text-xl font-bold">GitHub Issues Tracker</h1>
+
+
+<div class="flex gap-2">
+
+<input id="searchInput" class="border p-2 rounded" placeholder="Search issues">
+
+<button onclick="searchIssues()" class="bg-[#4a00ff] text-white px-3 rounded">
++ New Issue
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Tabs -->
+<div class="p-6 flex gap-3">
+
+<button onclick="changeTab('all',this)" class="tab bg-[#4a00ff] text-white px-4 py-2 rounded">
+All
+</button>
+
+<button onclick="changeTab('open',this)" class="tab bg-white text-black border-2 border-gray-300 px-4 py-2 rounded">
+Open
+</button>
+
+<button onclick="changeTab('closed',this)" class="tab bg-white text-black border-2 border-gray-300 px-4 py-2 rounded">
+Closed
+</button>
+
+</div>
+ 
+<section class="bg-white p-4">
+    <div class="flex justify-between px-4">
+<div class="left flex gap-4 items-center">
+    <div class="bg-[#4a00ff40] p-3 rounded-full">
+        <img src="assets/Aperture.png">
+    </div>
+    <div>
+        <h2 class="text-2xl font-bold">50 Issues</h2>
+        <p class="text-gray-500 text-xl">Track and manage your project issues</p>
+    </div>
+</div>
+<div class="right flex items-center gap-4">
+    <div class="flex gap-4">
+        <input type="radio">
+        <p class="text-xl font-medium">Open</p>
+    </div>
+    <div class="flex gap-3"> 
+       <input type="radio">
+    <p class="text-xl font-medium">Closed</p>
+</div>
+    </div>
+</section>
+
+
+<!-- Loading -->
+
+<div id="spinner" class="text-center text-gray-500">
+Loading Issues...
+</div>
+
+
+<!-- Issues Grid -->
+
+<div id="issues" class="p-6 grid lg:grid-cols-4 md:grid-cols-2 gap-4"></div>
+
+
+<!-- Modal -->
+
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center">
+
+<div class="bg-white p-6 rounded w-96">
+
+<div class="flex justify-between mb-4">
+
+<h2 class="text-lg font-bold">Issue Details</h2>
+
+<button onclick="closeModal()">✖</button>
+
+</div>
+
+<div id="modalBody"></div>
+
+</div>
+
+</div>
+
+
+<script src="script/dashboard.js"></script>
+
+    
+</body>
+</html>
