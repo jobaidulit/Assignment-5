@@ -17,19 +17,19 @@ alert("Invalid credentials")
 }
 // go to login
 
-// function login(){
+ function login(){
 
-// const user = document.getElementById("username").value
-//const pass = document.getElementById("password").value
+ const user = document.getElementById("username").value
+ const pass = document.getElementById("password").value
 
-// if(user === "admin" && pass === "admin123"){
+ if(user === "admin" && pass === "admin123"){
 
-// window.location.href = "dashboard.html"
+ window.location.href = "dashboard.html"
 
-// }else{
+ }else{
 
-// alert("Wrong credentials")
+ alert("Wrong credentials")
 
-//}
+}
 
-// }
+ }
